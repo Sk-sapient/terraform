@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "gke_firewall" {
-  name    = "test-firewall"
+  name    = "test-gke-firewall"
   network = google_compute_network.vpc_network.name
 
   allow {

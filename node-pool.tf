@@ -1,6 +1,6 @@
-resource "google_service_account" "kubernetes" {
-  account_id = "kubernetes"
-  display_name = "kubernetes"
+resource "google_service_account" "kubernetes-svc" {
+  account_id = "kubernetes-svc"
+  display_name = "kubernetes-svc"
 }
 
 resource "google_container_node_pool" "dev_preemptible_nodes" {
@@ -28,9 +28,10 @@ resource "google_container_node_pool" "dev_preemptible_nodes" {
     }
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    service_account = google_service_account.kubernetes.email
+    service_account = google_service_account.kubernetes-svc.email
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
   }
 }
+
