@@ -1,8 +1,8 @@
-region = "us-centarl1"
-zone   = "us-central1-a"
-project = "burner-kumshatr"
-cluster_name = "private-gke-cluster"
-network = "gke-network"
-node_count = 1
-machine_type = "e2-small"
-preemptibllity = true
+project         = "burner-kumshatr"
+region           = "us-central1"
+zone             = "us-central1-a"
+network          = "gke-network"
+cluster_name     = "gke-cluster"
+node_count       = 1
+machine_type     = "n1-standard-1"
+preemptibllity   = true
