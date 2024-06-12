@@ -24,7 +24,7 @@ resource "google_compute_subnetwork" "private" {
   name                     = "private"
   ip_cidr_range            = "10.0.0.0/16"
   region                   = var.region
-  network                  = google_compute_network.vpc_network.id
+  network                  = google_compute_network.vpc_network.name
   private_ip_google_access = true
 
   secondary_ip_range {
