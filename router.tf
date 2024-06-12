@@ -1,7 +1,7 @@
 resource "google_compute_router" "router" {
   name    = "router"
   region  = google_compute_subnetwork.private.region
-  network = google_compute_network.vpc_network.id
+  network = google_compute_network.vpc_network.name
 }
 
 resource "google_compute_router_nat" "nat" {
