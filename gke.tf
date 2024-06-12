@@ -37,7 +37,7 @@ resource "google_container_cluster" "primary" {
   }
 
   workload_identity_config {
-    workload_pool = "burner-dhijha.svc.id.goog"
+    workload_pool = "burner-kumshatr.svc.id.goog"
   }
 
   ip_allocation_policy {
