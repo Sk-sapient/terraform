@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "burner-tf-state"
+    bucket = "burner-tf-state1"
     prefix = "terraform/state"
   }
   required_providers {
